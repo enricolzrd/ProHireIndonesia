@@ -1,11 +1,17 @@
+import React from "react";
+// Import Link dari react-router-dom untuk navigasi halaman secara instan
+import { Link } from "react-router-dom";
+
 const Header = ({ onLogin }) => {
   return (
     <header className="flex items-center justify-between bg-white px-6 py-4 shadow-sm">
-      <div className="text-xl font-extrabold tracking-tight text-indigo-700">
+      {/* Logo diklik akan kembali ke halaman utama (landing page) */}
+      <Link to="/" className="text-xl font-extrabold tracking-tight text-indigo-700 hover:opacity-90">
         ProHireIndonesia
-      </div>
+      </Link>
 
       <nav className="hidden items-center gap-6 md:flex">
+        {/* Navigasi internal landing page menggunakan anchor tag (#) */}
         <a
           href="#home"
           className="font-medium text-gray-600 transition-colors hover:text-indigo-600"
@@ -26,6 +32,14 @@ const Header = ({ onLogin }) => {
         >
           Contact
         </a>
+
+        {/* PERUBAHAN TEKS: Mengubah nama menu menjadi "Job Cards" agar sesuai dengan main main-concept proyek kelompok */}
+        <Link
+          to="/jobs"
+          className="font-medium text-gray-600 transition-colors hover:text-indigo-600"
+        >
+          Job Cards
+        </Link>
       </nav>
 
       <div className="flex gap-2">
