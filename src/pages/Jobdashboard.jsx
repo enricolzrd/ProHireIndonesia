@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { initialJobs, dummyApplicants } from "../data/jobData"; 
 
 // Import komponen yang sudah dipisah
-// Di dalam file pages/Jobdashboard.jsx
 import JobCard from "../components/Jobs/JobCard";
-import ReviewModal from "../components/Jobs/ReviewModal";
 import JobFormModal from "../components/Jobs/JobFormModal";
-
+import ReviewModal from "../components/Jobs/ReviewModal";
 
 export default function DashboardJob() {
-  const [jobs, setJobs] = useState(initialJobs);
+  // 1. Modifikasi inisialisasi state untuk membaca Local Storage dulu
+  const [jobs, setJobs] = useState(() => {
+    const savedJobs = localStorage.getItem("dashboardJobs");
+    // Jika ada data di local storage, pakai data itu. Jika kosong, pakai initialJobs.
+    return savedJobs ? JSON.parse(savedJobs) : initialJobs;
+  });
+
   const [selectedJob, setSelectedJob] = useState(null);
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -18,6 +22,11 @@ export default function DashboardJob() {
     department: "Engineering",
     location: "Remote",
   });
+
+  // 2. Tambahkan useEffect untuk otomatis save ke Local Storage tiap kali 'jobs' berubah
+  useEffect(() => {
+    localStorage.setItem("dashboardJobs", JSON.stringify(jobs));
+  }, [jobs]);
 
   const handleReviewClick = (job) => {
     setSelectedJob(job);
