@@ -6,11 +6,9 @@ import { featureData } from "./data/features";
 // Pages
 import LandingPage from "./pages/LandingPage";
 import LoginPage from "./pages/LoginPage";
+import DashboardJob from "./pages/Jobdashboard";
 
-// 1. Bagian yang kamu tambahkan aman di sini (Import Dashboard kamu)
-import DashboardJob from "./components/DashboardJob";
-
-import Footer from "./components/Footer";
+import Footer from "./components/UI/Footer";
 
 const LoginPageWrapper = () => {
   const navigate = useNavigate();
@@ -25,12 +23,11 @@ export default function App() {
       <div className="min-h-screen flex flex-col">
         <div className="flex-1">
           <Routes>
-            {/* Kode asli teman kelompokmu tetap utuh di bawah ini */}
+
             <Route path="/" element={<LandingPage features={features} />} />
             <Route path="/login" element={<LoginPageWrapper />} />
-
-            {/* 2. Bagian rute yang kamu tambahkan agar dashboard-mu bisa dipanggil */}
             <Route path="/jobs" element={<DashboardJob />} />
+
           </Routes>
         </div>
         
