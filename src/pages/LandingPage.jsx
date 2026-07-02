@@ -1,9 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Header from "../components/Header";
-import HeroSection from "../components/HeroSection";
-import CardGrid from "../components/CardGrid";
-import ContactSection from "../components/ContactSection";
+import Header from "../components/UI/Header";
+import HeroSection from "../components/UI/HeroSection";
+import CardGrid from "../components/UI/CardGrid";
+import ContactSection from "../components/UI/ContactSection";
 
 export default function LandingPage({ features }) {
   const navigate = useNavigate();
