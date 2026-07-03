@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // Tambahkan currentJob di parameter
 export default function ApplicantSidebar({ applicants, activeId, setActiveId, currentJob }) {
   return (
-    <aside className="w-[30%] min-w-[340px] max-w-[420px] bg-white border-r border-slate-200 flex flex-col z-10 shadow-sm">
+    <aside className="w-[30%] min-w-85 max-w-105 bg-white border-r border-slate-200 flex flex-col z-10 shadow-sm">
       <div className="p-6 border-b border-slate-100 bg-[#0A192F]">
         <Link to="/jobs" className="flex items-center text-sm font-medium text-slate-300 hover:text-cyan-400 mb-5 transition-colors">
           <ArrowLeft className="w-4 h-4 mr-1.5" /> Back to Job Postings

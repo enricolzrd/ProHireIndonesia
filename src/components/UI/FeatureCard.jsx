@@ -1,7 +1,7 @@
 const FeatureCard = ({ icon, title, description, note }) => {
   return (
     <div className="flex items-start gap-4 rounded-xl border border-indigo-100/60 bg-indigo-50/40 p-3 transition-all hover:bg-white hover:shadow-md">
-      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-indigo-100 text-xl shadow-sm">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-xl shadow-sm">
         {icon}
       </div>
 

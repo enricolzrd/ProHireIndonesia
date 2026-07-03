@@ -21,7 +21,7 @@ const HeroSection = () => {
 
         <a
           href="#contact"
-          className="rounded-2xl bg-gradient-to-r from-indigo-600 to-blue-600 px-8 py-3 font-semibold text-white shadow-md transition-all duration-300 hover:from-indigo-700 hover:to-blue-700 hover:shadow-lg"
+          className="rounded-2xl bg-linear-to-r from-indigo-600 to-blue-600 px-8 py-3 font-semibold text-white shadow-md transition-all duration-300 hover:from-indigo-700 hover:to-blue-700 hover:shadow-lg"
         >
           Start Screening Now
         </a>

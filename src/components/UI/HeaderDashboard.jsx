@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Search, Bell } from "lucide-react";
 
-export default function HeaderDb() {
+export default function Header() {
   return (
     <header className="w-full bg-white border-b border-slate-200 py-3 px-6 md:px-8 flex justify-between items-center shadow-sm z-50 sticky top-0">
       

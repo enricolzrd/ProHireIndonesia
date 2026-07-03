@@ -33,13 +33,6 @@ const Header = ({ onLogin }) => {
           Contact
         </a>
 
-        {/* PERUBAHAN TEKS: Mengubah nama menu menjadi "Job Cards" agar sesuai dengan main main-concept proyek kelompok */}
-        <Link
-          to="/jobs"
-          className="font-medium text-gray-600 transition-colors hover:text-indigo-600"
-        >
-          Job Cards
-        </Link>
       </nav>
 
       <div className="flex gap-2">

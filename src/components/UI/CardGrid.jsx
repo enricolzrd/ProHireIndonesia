@@ -22,7 +22,7 @@ const CardGrid = ({ features }) => {
 
               <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl md:text-4xl lg:text-5xl">
                 ProHire{" "}
-                <span className="bg-gradient-to-r from-indigo-700 to-blue-600 bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-indigo-700 to-blue-600 bg-clip-text text-transparent">
                   Indonesia
                 </span>
               </h2>
@@ -55,7 +55,7 @@ const CardGrid = ({ features }) => {
               </div>
             </div>
 
-            <div className="flex flex-col justify-center bg-gradient-to-br from-indigo-50/70 via-white to-indigo-50/30 p-6 sm:p-8 md:w-2/5 md:rounded-r-3xl md:p-10">
+            <div className="flex flex-col justify-center bg-linear-to-br from-indigo-50/70 via-white to-indigo-50/30 p-6 sm:p-8 md:w-2/5 md:rounded-r-3xl md:p-10">
               <div className="space-y-6 text-center md:text-left">
                 <div
                   className="mx-auto flex h-48 w-48 rotate-1 flex-col items-center justify-center rounded-2xl border border-indigo-100 bg-cover bg-center shadow-xl transition-transform duration-300 hover:rotate-0 md:mx-0 md:h-56 md:w-56"

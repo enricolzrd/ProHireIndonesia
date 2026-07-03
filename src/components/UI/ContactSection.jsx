@@ -19,7 +19,7 @@ const ContactSection = () => {
 
             <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl md:text-4xl lg:text-5xl">
               Get in{" "}
-              <span className="bg-gradient-to-r from-indigo-700 to-blue-600 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-indigo-700 to-blue-600 bg-clip-text text-transparent">
                 Touch
               </span>
             </h2>
@@ -83,7 +83,7 @@ const ContactSection = () => {
               <div className="flex justify-center sm:justify-start">
                 <button
                   type="button"
-                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 px-8 py-3 font-semibold text-white shadow-md transition-all duration-200 hover:from-indigo-700 hover:to-blue-700 hover:shadow-lg sm:w-auto"
+                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-linear-to-r from-indigo-600 to-blue-600 px-8 py-3 font-semibold text-white shadow-md transition-all duration-200 hover:from-indigo-700 hover:to-blue-700 hover:shadow-lg sm:w-auto"
                 >
                   <span>📩</span>
                   Send Message

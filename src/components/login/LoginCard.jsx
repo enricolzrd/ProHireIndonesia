@@ -1,7 +1,8 @@
 import LoginHeader from "./LoginHeader";
 import LoginForm from "./LoginForm";
 
-const LoginCard = ({ onBack }) => {
+// 1. Tangkap props onLogin dan isLoading yang dikirim dari LoginPage
+const LoginCard = ({ onBack, onLogin, isLoading }) => {
   return (
     <div className="w-full max-w-md rounded-2xl border border-slate-200 bg-white px-8 py-10 shadow-md">
       <button
@@ -13,7 +14,8 @@ const LoginCard = ({ onBack }) => {
 
       <LoginHeader />
 
-      <LoginForm />
+      {/* 2. Oper lagi props-nya ke dalam LoginForm */}
+      <LoginForm onLogin={onLogin} isLoading={isLoading} />
 
       <div className="my-8 h-px w-full bg-slate-200"></div>
 

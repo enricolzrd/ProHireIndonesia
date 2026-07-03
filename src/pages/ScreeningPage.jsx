@@ -46,7 +46,7 @@ export default function CVScreeningPage() {
     return (
       <div className="flex flex-col items-center justify-center h-screen bg-[#F4F7F9]">
         <h2 className="text-2xl font-bold mb-4">Job Not Found</h2>
-        <Link to="/dashboard" className="text-cyan-600 underline font-semibold">Return to Dashboard</Link>
+        <Link to="/jobs" className="text-cyan-600 underline font-semibold">Return to Dashboard</Link>
       </div>
     );
   }
