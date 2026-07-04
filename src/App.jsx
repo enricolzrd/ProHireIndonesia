@@ -1,13 +1,41 @@
-import React from 'react'
+import React, { useState } from "react";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 
-const App = () => {
+// Data
+import { featureData } from "./data/features";
+// Pages
+import LandingPage from "./pages/LandingPage";
+import LoginPage from "./pages/LoginPage";
+import DashboardJob from "./pages/Jobdashboard";
+import CVScreeningPage from "./pages/ScreeningPage";
+
+import Footer from "./components/UI/Footer";
+import HeaderDb from "./components/UI/HeaderDashboard";
+
+const LoginPageWrapper = () => {
+  const navigate = useNavigate();
+  return <LoginPage onBack={() => navigate("/")} />;
+};
+
+export default function App() {
+  const [features] = useState(featureData);
+
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    </div>
-  )
-}
+    <BrowserRouter>
+      <div className="min-h-screen flex flex-col">
+        <div className="flex-1">
+          <Routes>
 
-export default App
+            <Route path="/" element={<LandingPage features={features} />} />
+            <Route path="/login" element={<LoginPageWrapper />} />
+            <Route path="/jobs" element={<><HeaderDb /><DashboardJob /></>} />
+            <Route path="/screening/:id" element={<><HeaderDb /><CVScreeningPage /></>} />
+
+          </Routes>
+        </div>
+        
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
+}
